@@ -1,5 +1,6 @@
 package com.leetcode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CreateTargetArray {
@@ -9,10 +10,15 @@ public class CreateTargetArray {
         System.out.println(Arrays.toString(createTargetArray(arr, i)));
     }
     static int[] createTargetArray(int[] nums, int[] index) {
-        int[] newarr = new int[nums.length];
-        for(int i = 0; i< nums.length; i++){
-            newarr[index[i]] = nums[i];
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i = 0; i<nums.length; i++){
+            list.add(index[i], nums[i]);
         }
-        return newarr;
+        int[] target = new int[nums.length];
+        int in = 0;
+        for(int n: list){
+            target[in++] = n;
+        }
+        return target;
     }
 }
