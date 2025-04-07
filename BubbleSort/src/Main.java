@@ -3,8 +3,33 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int[] nums = {5, 4, 3, 2, 1};
-        bubbleSort(nums);
+//        bubbleSort(nums);
+        selectionSort(nums);
         System.out.println(Arrays.toString(nums));
+    }
+
+    static void selectionSort(int[] arr){
+        for (int i = 0; i < arr.length; i++){
+            int lastInedx = arr.length - i - 1;
+            int maxIndex = maxIndex(arr, 0, lastInedx);
+            swap(arr, maxIndex, lastInedx);
+        }
+    }
+
+    static int maxIndex(int[] nums, int start, int end){
+        int max = start;
+        for (int i = start; i <= end; i++){
+            if(nums[i] > nums[max]){
+                max = i;
+            }
+        }
+        return max;
+    }
+
+    static void swap(int[] arr, int start, int end){
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
     }
     static void bubbleSort(int[] arr){
         boolean swapped;
