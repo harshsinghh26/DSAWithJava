@@ -10,7 +10,7 @@ public class FibbonaciNumbers {
         int a = 0;
         int b = 1;
 //        System.out.println(a);
-        for (int i = 1; i<n-1; i++ ){
+        for (int i = 1; i<=n-1; i++ ){
 //            System.out.println(b);
                 int fibb = a + b;
                 a = b;
