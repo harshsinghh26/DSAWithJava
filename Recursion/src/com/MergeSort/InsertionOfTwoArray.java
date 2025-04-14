@@ -1,21 +1,31 @@
 package com.MergeSort;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-public class MergeSort1 {
+public class InsertionOfTwoArray {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 2, 1};
-        mergeSort(arr, 0, arr.length);
-        System.out.println(Arrays.toString(arr));
+        int[] arr1 = {1, 2, 2, 1};
+        int[] arr2 = {2, 2};
+//        System.out.println(Arrays.toString(intersection(arr1, arr2)));
+        sort(arr1, 0, arr1.length);
+        System.out.println(Arrays.toString(arr1));
     }
-    static void mergeSort(int[] arr, int s, int e){
+
+//    static int[] intersection(int[] nums1, int[] nums2) {
+//
+//
+//    }
+
+    static void sort(int[] arr, int s, int e){
         if (e - s == 1){
             return;
         }
-        int mid = (s + e) / 2;
-        mergeSort(arr, s, mid);
-        mergeSort(arr, mid, e);
-        merge(arr, s, mid, e);
+        int m  = s + e / 2;
+        sort(arr, s , m);
+        sort(arr, m, e);
+        merge(arr, s, m , e);
     }
 
     static void merge(int[] arr, int s, int m, int e){
@@ -25,7 +35,7 @@ public class MergeSort1 {
         int j = m;
         int k = 0;
 
-        while(i < m && j < e){
+        while (i < m && j < e){
             if (arr[i] < arr[j]){
                 mix[k] = arr[i];
                 i++;
@@ -35,20 +45,22 @@ public class MergeSort1 {
             }
             k++;
         }
+
         while (i < m){
             mix[k] = arr[i];
             i++;
             k++;
         }
-
         while (j < e){
             mix[k] = arr[j];
             j++;
             k++;
         }
-        for (int l = 0; l < mix.length; l++){
-            arr[s+l] = mix[l];
+
+        for (int l = 0; l <mix.length; l++){
+            if (arr[s + l] == mix[l]){
+                arr[s + l] = mix[l];
+            }
         }
     }
-
 }
