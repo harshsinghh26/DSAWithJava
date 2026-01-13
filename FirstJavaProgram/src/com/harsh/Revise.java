@@ -74,18 +74,81 @@ public class Revise {
 
         // sixth Program
 
-        System.out.print("Enter a number: ");
-        int n = in.nextInt();
-        int a = 0;
-        int b = 1;
-        System.out.print(a + " " + b);
-//        System.out.println(b);
+//        System.out.print("Enter a number: ");
+//        int n = in.nextInt();
+//        int a = 0;
+//        int b = 1;
+//        System.out.print(a + " " + b);
+////        System.out.println(b);
+//
+//        for (int i = 0; i<n-2; i++){
+//            int c = a + b;
+//            a = b;
+//            b = c;
+//            System.out.print(c + " ");
+//        }
 
-        for (int i = 0; i<n-2; i++){
-            int c = a + b;
-            a = b;
-            b = c;
-            System.out.print(c + " ");
-        }
+        // seventh Program
+
+//        System.out.print("Enter a number: ");
+//        int number = in.nextInt();
+//        int check = number;
+//        int ans = 0;
+//        while (number > 0){
+//            int rem = number % 10;
+//
+//            ans = ans * 10 + rem;
+//            number = number/10;
+//        }
+//        if (ans == check){
+//            System.out.println("Number is palindrome!!");
+//        }else {
+//            System.out.println("Number is not palindrome!!");
+//        }
+
+        // Eight program
+
+//        System.out.print("Enter a number:");
+//        int n = in.nextInt();
+//        int check = n;
+//        int ans = 0;
+//
+//        while (n > 0){
+//            int rem = n %10;
+//
+//            ans += rem * rem * rem;
+//            n = n/10;
+//        }
+//        if (ans == check){
+//            System.out.println("It's an Armstrong Number");
+//        }else {
+//            System.out.println("Not an Armstrong Number");
+//        }
+
+        // Ninth Program
+
+//        System.out.print("Enter a Num: ");
+//        int n = in.nextInt();
+//
+//        for (int i = 1; i<= n; i++){
+//            if (n % i == 0){
+//                System.out.print(i + ", ");
+//            }
+//        }
+
+        // Tenth Program
+
+//        int sum = 0;
+//
+//        while (true){
+//            System.out.print("Enter a num: ");
+//            int n = in.nextInt();
+//            if (n != 0){
+//                sum += n;
+//            }else {
+//                break;
+//            }
+//        }
+//        System.out.print("Sum of all the numbers - " + sum);
     }
 }
