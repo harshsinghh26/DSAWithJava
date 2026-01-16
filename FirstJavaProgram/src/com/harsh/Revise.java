@@ -282,7 +282,11 @@ public class Revise {
 
         int NCR = factStudent/(factOfSelectedStudent * repStudentFact);
 
-        System.out.print("NCR = " + NCR);
+        System.out.println("NCR = " + NCR);
+
+        int NPR = factStudent/repStudentFact;
+
+        System.out.println("NPR = " + NPR);
 
     }
 }
