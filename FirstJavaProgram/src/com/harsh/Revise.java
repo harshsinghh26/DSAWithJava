@@ -150,5 +150,139 @@ public class Revise {
 //            }
 //        }
 //        System.out.print("Sum of all the numbers - " + sum);
+
+
+        // eleventh Program
+
+//        int max = 0;
+//
+//        while (true){
+//            System.out.print("Enter a num: ");
+//            int n = in.nextInt();
+//            if (n != 0){
+//                if (n > max){
+//                    max = n;
+//                }
+//            }else {
+//                break;
+//            }
+//        }
+//        System.out.println("Largest number from all- " + max);
+
+        // twelfth Program
+
+//        System.out.print("Enter a num: ");
+//        int n = in.nextInt();
+//        int fact = 1;
+//
+//        for (int i = 0; i<n; i++){
+//            fact = fact * (n - i);
+//        }
+//
+//        System.out.println("Factorial of the num is = " + fact);
+
+
+        // Thirteen Program
+
+//        int sum = 0;
+//        int count = 0;
+//
+//        while (true){
+//            System.out.print("Enter a num: ");
+//            int n = in.nextInt();
+//
+//            if (n != 0){
+//                sum += n;
+//                count++;
+//            }else {
+//                break;
+//            }
+//        }
+//        float ave = (float) sum /count;
+//
+//        System.out.println("Average of all the num = " + ave);
+
+        // Fourteenth Program
+
+//        System.out.print("Enter the MRP of the Product: ");
+//        int MRP = in.nextInt();
+//        System.out.print("Enter the discount in %: ");
+//        int dis = in.nextInt();
+//
+//        float disr = (float) (MRP * dis)/ 100;
+//
+//        float finalPrice = MRP - disr;
+//
+//        System.out.println("Final Discounted price of the product = " + finalPrice);
+
+        // Fifteenth Program
+
+//        System.out.print("Enter the price of the product: ");
+//        int p = in.nextInt();
+//        System.out.print("Enter the rate decrease every year: ");
+//        int d = in.nextInt();
+//        System.out.print("Enter the expected year of use: ");
+//        int y = in.nextInt();
+//
+//
+//        int Depreciation = (p - d)/y;
+//
+//        System.out.println("Yearly depreciation = " + Depreciation);
+
+
+        // Sixteenth Program
+
+//        System.out.print("Enter the total runs he has scored: ");
+//        int score = in.nextInt();
+//        System.out.print("Enter the total innings he has played: ");
+//        int innings = in.nextInt();
+//        System.out.print("Enter the innings he was not out: ");
+//        int notOut = in.nextInt();
+//
+//        float battingAverage = Math.round((float)score/ (innings - notOut));
+//
+//        System.out.println("Batting average is = " + battingAverage);
+
+        // Seventeenth Program
+
+//        System.out.print("Enter a word: ");
+//        String str = in.nextLine();
+//
+//
+//        for (char i = 1; i<=str.length(); i++){
+//            System.out.print(str.charAt(str.length() - i));
+//        }
+
+        // Eighteenth Program
+
+        System.out.print("Enter the total number of students: ");
+        int student = in.nextInt();
+        System.out.print("Enter the student want to select: ");
+        int selectedStudent = in.nextInt();
+
+
+        int factStudent = 1;
+        for (int i = 0; i<student; i++){
+            factStudent *= (student - i);
+        }
+//        System.out.println(factStudent);
+
+        int factOfSelectedStudent = 1;
+        for (int j = 0; j<selectedStudent; j++){
+            factOfSelectedStudent *= (selectedStudent - j);
+        }
+//        System.out.println(factOfSelectedStudent);
+
+        int repSelection = student - selectedStudent;
+        int repStudentFact = 1;
+        for (int k = 0; k<repSelection; k++){
+            repStudentFact *= (repSelection - k);
+        }
+//        System.out.println(repStudentFact);
+
+        int NCR = factStudent/(factOfSelectedStudent * repStudentFact);
+
+        System.out.print("NCR = " + NCR);
+
     }
 }
