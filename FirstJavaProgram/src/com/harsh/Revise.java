@@ -255,38 +255,63 @@ public class Revise {
 
         // Eighteenth Program
 
-        System.out.print("Enter the total number of students: ");
-        int student = in.nextInt();
-        System.out.print("Enter the student want to select: ");
-        int selectedStudent = in.nextInt();
+//        System.out.print("Enter the total number of students: ");
+//        int student = in.nextInt();
+//        System.out.print("Enter the student want to select: ");
+//        int selectedStudent = in.nextInt();
+//
+//
+//        int factStudent = 1;
+//        for (int i = 0; i<student; i++){
+//            factStudent *= (student - i);
+//        }
+////        System.out.println(factStudent);
+//
+//        int factOfSelectedStudent = 1;
+//        for (int j = 0; j<selectedStudent; j++){
+//            factOfSelectedStudent *= (selectedStudent - j);
+//        }
+////        System.out.println(factOfSelectedStudent);
+//
+//        int repSelection = student - selectedStudent;
+//        int repStudentFact = 1;
+//        for (int k = 0; k<repSelection; k++){
+//            repStudentFact *= (repSelection - k);
+//        }
+////        System.out.println(repStudentFact);
+//
+//        int NCR = factStudent/(factOfSelectedStudent * repStudentFact);
+//
+//        System.out.println("NCR = " + NCR);
+//
+//        int NPR = factStudent/repStudentFact;
+//
+//        System.out.println("NPR = " + NPR);
 
 
-        int factStudent = 1;
-        for (int i = 0; i<student; i++){
-            factStudent *= (student - i);
+        // Nineteenth Problem
+
+        System.out.print("Enter first num: ");
+        int firstNum = in.nextInt();
+        System.out.print("Enter second num: ");
+        int secondNum = in.nextInt();
+        int[] fArr = {};
+
+        for (int i = 1; i<=firstNum; i++){
+            if(firstNum % i == 0){
+                fArr[i] = i;
+            }
         }
-//        System.out.println(factStudent);
 
-        int factOfSelectedStudent = 1;
-        for (int j = 0; j<selectedStudent; j++){
-            factOfSelectedStudent *= (selectedStudent - j);
+        for (int j = 1; j<=secondNum; j++){
+            if (secondNum % j == 0){
+                int[] sArr = new int[j];
+            }
         }
-//        System.out.println(factOfSelectedStudent);
 
-        int repSelection = student - selectedStudent;
-        int repStudentFact = 1;
-        for (int k = 0; k<repSelection; k++){
-            repStudentFact *= (repSelection - k);
-        }
-//        System.out.println(repStudentFact);
 
-        int NCR = factStudent/(factOfSelectedStudent * repStudentFact);
 
-        System.out.println("NCR = " + NCR);
 
-        int NPR = factStudent/repStudentFact;
-
-        System.out.println("NPR = " + NPR);
 
     }
 }
