@@ -1,5 +1,6 @@
 package com.harsh;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -32,10 +33,15 @@ public class Main {
 
         // 4
 
-//        System.out.print("Enter a num: ");
-//        int num = in.nextInt();
-//
-//        primeNum(num);
+        System.out.print("Enter a num: ");
+        int num = in.nextInt();
+
+        boolean ans = primeNum(num);
+        if (!ans){
+            System.out.println("The given num is not a Prime Number!!");
+        }else {
+            System.out.println("The given num is a Prime Number!!");
+        }
 
         // 5
 
@@ -66,6 +72,25 @@ public class Main {
 //        boolean ans = isTriplet(arr);
 //        System.out.println(ans);
 
+        // 9
+
+//        System.out.print("Enter a natural num: ");
+//        int num = in.nextInt();
+//
+//        int ans = sumOfN(num);
+//
+//        System.out.println("Total sum of all numbers is = " + ans);
+
+        // 10
+
+//        System.out.print("Enter first num: ");
+//        int f = in.nextInt();
+//        System.out.print("Enter second num: ");
+//        int s = in.nextInt();
+//
+//        int[] ans = primeNum(f, s);
+//
+//        System.out.println(Arrays.toString(ans));
     }
 
     // First Program
@@ -95,12 +120,17 @@ public class Main {
 
     //Fourth Program
 
-    static void primeNum(int num){
-        if (num % 2 != 0 && num % 3 != 0 && num != 1){
-            System.out.println("The Given Number is a Prime number!!");
-        }else {
-            System.out.println("The Given number is not a Prime number!!");
+    static boolean primeNum(int num){
+        if (num <= 1){
+            return false;
         }
+
+        for (int i = 2; i<num; i++){
+            if (num % i == 0){
+                return false;
+            }
+        }
+        return true;
     }
 
     // Fifth Program
@@ -182,5 +212,48 @@ public class Main {
             }
         }
         return false;
+    }
+
+    // Ninth Program
+
+    static int sumOfN(int n){
+        int sum = 0;
+
+        for (int i = 1; i<=n; i++){
+            sum += i;
+        }
+        return sum;
+    }
+
+    // Tenth Program
+
+    static boolean isPrime(int n) {
+
+        if (n <= 1)
+            return false;
+
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0)
+                return false;
+        }
+
+        return true;
+    }
+
+    static int[] primeNum(int m, int n){
+
+        int[] temp = new int[n-m+1];
+        int index = 0;
+
+        for (int i = m; i<=n; i++){
+            if (isPrime(i)){
+                temp[index++] = i;
+            }
+        }
+
+        int[] result = new int[index];
+        System.arraycopy(temp, 0, result, 0, index);
+
+        return result;
     }
 }
